@@ -1,0 +1,28 @@
+/*
+ *  Koszalin 2003
+ *  vector.idl
+ *  Definicje interfejsow Counter i Vector
+ *  Dariusz Rataj (C)
+ */
+
+module vtools { 
+
+ // licznik
+ interface  Counter{ 
+   attribute long count;
+   void inc();  
+   void dec();
+  }; // Counter 
+
+ // wector
+ interface  Vector{ 
+  const unsigned short MAXSIZE=10; 
+  typedef long array[MAXSIZE]; 
+
+   // dodawanie wektorow c = a + b
+   array add(in short size, in array a, in array b);  
+
+   // odejmowanie wektorow c = a - b
+   array sub(in short size, in array a, in array b);
+  }; 
+}; // Vector

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PDS.iml" filepath="$PROJECT_DIR$/PDS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDS1/PDS1.iml" filepath="$PROJECT_DIR$/PDS1/PDS1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDS2/PDS2.iml" filepath="$PROJECT_DIR$/PDS2/PDS2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDS3/PDS3.iml" filepath="$PROJECT_DIR$/PDS3/PDS3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDS4/PDS4.iml" filepath="$PROJECT_DIR$/PDS4/PDS4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDS5/PDS5.iml" filepath="$PROJECT_DIR$/PDS5/PDS5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDS6/PDS6.iml" filepath="$PROJECT_DIR$/PDS6/PDS6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PDS7/PDS7.iml" filepath="$PROJECT_DIR$/PDS7/PDS7.iml" />
+    </modules>
+  </component>
+</project>

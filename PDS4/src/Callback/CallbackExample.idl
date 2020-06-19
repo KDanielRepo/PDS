@@ -1,0 +1,16 @@
+
+module CallbackApp
+{
+    interface MsgCallback
+    {
+        void callback(in string message);
+    };
+
+
+    interface Message
+    {
+        string sendMessage(in MsgCallback objRef, in string message);
+    };
+};
+
+

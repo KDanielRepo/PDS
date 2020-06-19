@@ -1,0 +1,6 @@
+module dbtest {
+ interface dbFace {
+   string getName(in long primary_key);
+   string getLastQuery();
+ };
+};

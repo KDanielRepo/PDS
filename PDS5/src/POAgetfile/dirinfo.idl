@@ -1,0 +1,15 @@
+module dirinfo { 
+ interface Directory { 
+   typedef sequence<string> dlist;
+ 
+   dlist getDirList(in string subdir); 
+   string getFileInfo(in string filename); 
+
+   // ---- propozycje rozbudowy interfejsu: -----
+   // typedef sequence<octet> data;
+   // data getFileData(in string filename);
+   // void createDirectory(in string dirname);
+   // void deleteDirectory(in string dirname);
+
+  }; 
+}; 

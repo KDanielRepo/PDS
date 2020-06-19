@@ -1,0 +1,10 @@
+module examples {
+ module carinfo {
+ 
+  interface carPrice
+  {
+    float getCarPrice( in string model );
+  };
+  
+ }; 
+};

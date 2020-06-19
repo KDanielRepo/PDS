@@ -1,0 +1,8 @@
+module hostinfo
+{
+  interface hostInfo
+  {
+    string getDayTime();
+    string getAddress();
+  };
+};
