@@ -13,7 +13,7 @@ public class dayTimeClient {
  public static void main(String[] args) {
 
   Socket socket;
-  String host = "localhost";
+  String host = "time.nist.gov";
   BufferedReader in;
   PrintWriter out = null;
   String message = "GET / HTTP/1.1\r\n"+
@@ -27,7 +27,23 @@ public class dayTimeClient {
      if (args.length > 0) host = args[0];
     
   /*   tworzenie gniazda klienta, pobranie danych, wydruk informacji na konsoli */
-  try {
+     try {
+         Socket theSocket = new Socket(host, 13);
+         InputStream timeStream = theSocket.getInputStream();
+         StringBuffer time = new StringBuffer();
+         int c;
+         while ((c = timeStream.read()) != -1)
+             time.append((char) c);
+         String timeString = time.toString().trim();
+         System.out.println("It is " + timeString + " at " + host);
+     } // end try
+     catch (UnknownHostException ex) {
+         System.err.println(ex);
+     } catch (IOException ex) {
+         System.err.println(ex);
+     }
+
+  /*try {
     socket = new Socket(host, 13);
     //socket.setSoTimeout(1);
       out = new PrintWriter(socket.getOutputStream(), true);
@@ -36,13 +52,13 @@ public class dayTimeClient {
     String time = in.readLine();
     System.out.println("Host: " + host + " zwraca na porcie nr 13:");
     System.out.println("date i czas: " + time);
-   } 
+   }
   catch (UnknownHostException e) {
     System.err.println(e);
    }
   catch (IOException e) {
     System.err.println(e);
-   }
+   }*/
     
  }  // koniec main
 } // koniec dayTimeClient

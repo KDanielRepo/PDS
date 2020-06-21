@@ -1,1 +1,1 @@
-rmic HelloImpl
+rmic SSL_RMI.server.HelloImpl

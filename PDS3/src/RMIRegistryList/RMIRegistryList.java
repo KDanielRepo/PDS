@@ -1,15 +1,17 @@
 package RMIRegistryList;/*
  *  Koszalin 2003
  *  RMIRegistryList.java
- *  Aplikacja pobiera i usuwa obiekty 
+ *  Aplikacja pobiera i usuwa obiekty
  *  zarejestrowane w RMI Registry
  *  Dariusz Rataj (C)
  */
 
 import java.io.*;
 import java.rmi.*;
+import java.rmi.registry.LocateRegistry;
 
 public class RMIRegistryList {
+
 
  String url = "rmi://localhost";
 
@@ -27,7 +29,7 @@ public void deleteObjects(){
    String[] rObjects = Naming.list(url);
    for (int i = 0; i < rObjects.length; i++) {
      try {
-      Naming.unbind(rObjects[i]); 
+      Naming.unbind(rObjects[i]);
       System.out.println(" Obiekt " + rObjects[i] + " usuniety");
      }
       catch (NotBoundException e) {
@@ -61,7 +63,12 @@ public void listObjects(){
 }
 
 public static void main(String[] args) throws IOException {
-  RMIRegistryList lister = new RMIRegistryList(); 
+  RMIRegistryList lister = new RMIRegistryList();
+    try {
+        LocateRegistry.createRegistry(1099);
+    } catch (RemoteException e) {
+        e.printStackTrace();
+    }
   while (true) {
   RMIRegistryList.printMenu();
   int option = 0;  // odczyt jednego znaku
@@ -74,5 +81,5 @@ public static void main(String[] args) throws IOException {
 	    } // koniec switch
   } // koniec while (true)
  } // koniec main
- 
+
 } // koniec RMIRegistryList

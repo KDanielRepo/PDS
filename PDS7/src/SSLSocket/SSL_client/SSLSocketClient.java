@@ -1,3 +1,5 @@
+package SSLSocket.SSL_client;
+
 import java.net.*;
 import java.io.*;
 import javax.net.ssl.*;

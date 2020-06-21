@@ -1,3 +1,5 @@
+package SSLSocket.SSL_client;
+
 import java.net.*;
 import java.io.*;
 import javax.net.ssl.*;
@@ -24,7 +26,7 @@ public class SSLSocketClientWithAuth {
 		kmf = KeyManagerFactory.getInstance("SunX509");
 		ks = KeyStore.getInstance("JKS");
 
-		ks.load(new FileInputStream("clientstore"), passphrase);
+		ks.load(new FileInputStream("SSLSocket/gen_keys_certs_RSA/clientstore"), passphrase);
 
 		kmf.init(ks, passphrase);
 		ctx.init(kmf.getKeyManagers(), null, null);

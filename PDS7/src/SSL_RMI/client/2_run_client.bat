@@ -1,1 +1,1 @@
-java -Djava.security.policy=java.mypolicy HelloClient
+java -Djava.security.policy=SSL_RMI/client/java.mypolicy SSL_RMI.server.HelloClient

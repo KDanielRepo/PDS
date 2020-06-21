@@ -1,3 +1,5 @@
+package SSL_RMI.client;
+
 import java.io.*;
 import java.net.*;
 import java.rmi.server.*;
@@ -23,7 +25,7 @@ public class RMISSLServerSocketFactory
 		kmf = KeyManagerFactory.getInstance("SunX509");
 		ks = KeyStore.getInstance("JKS");
 
-		ks.load(new FileInputStream("serverstore"), passphrase);
+		ks.load(new FileInputStream("SSL_RMI\\gen_key\\serverstore"), passphrase);
 		kmf.init(ks, passphrase);
 		ctx.init(kmf.getKeyManagers(), null, null);
 

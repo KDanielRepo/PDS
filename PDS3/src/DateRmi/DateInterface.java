@@ -5,7 +5,8 @@ package DateRmi;/*
  *  Dariusz Rataj (C)
  */
 
-import java.rmi.*;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 public interface DateInterface extends Remote {
 

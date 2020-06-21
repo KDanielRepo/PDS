@@ -7,12 +7,20 @@ package DBrmi;/*
 
 import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
 
 public class DBServer {
 
  public static void main(String[] args) {
 
+     try {
+         LocateRegistry.createRegistry(1099);
+     } catch (RemoteException e) {
+         e.printStackTrace();
+     }
      System.setProperty("java.rmi.server.hostname","127.0.0.1");
+     System.setProperty("java.security.policy", "C:\\PDS\\PDS3\\src\\DBrmi\\java.mypolicy");
      System.setSecurityManager(new RMISecurityManager());
 
    try {

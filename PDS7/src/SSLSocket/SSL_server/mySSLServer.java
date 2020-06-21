@@ -1,3 +1,5 @@
+package SSLSocket.SSL_server;
+
 import java.io.*;
 import java.net.*;
 import javax.net.*;
@@ -46,7 +48,7 @@ public class mySSLServer implements Runnable {
 		ctx = SSLContext.getInstance("TLS");
 		kmf = KeyManagerFactory.getInstance("SunX509");
 		ks = KeyStore.getInstance("JKS");		
-		ks.load(new FileInputStream("serverstore"), passphrase);
+		ks.load(new FileInputStream("SSLSocket/gen_keys_certs_RSA/serverstore"), passphrase);
 		kmf.init(ks, passphrase);
 		ctx.init(kmf.getKeyManagers(), null, null);
 
@@ -114,7 +116,7 @@ public class mySSLServer implements Runnable {
     }
 
     /**
-     * Nowy w¹tek nasluchujacy
+     * Nowy wtek nasluchujacy
      */
     private void newListener()  {
      (new Thread(this)).start();

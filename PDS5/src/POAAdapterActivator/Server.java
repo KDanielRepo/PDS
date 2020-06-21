@@ -15,7 +15,7 @@ public class Server {
         try {
             args = new String[4];
             args[0] = "-ORBInitialPort";
-            args[1] = "1035";
+            args[1] = "1050";
             args[2] = "-ORBInitialHost";
             args[3] = "127.0.0.1";
             ORB orb = ORB.init(args, null);

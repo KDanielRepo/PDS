@@ -1,3 +1,5 @@
+package SSL_RMI.server;
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
